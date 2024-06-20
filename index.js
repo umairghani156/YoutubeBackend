@@ -20,6 +20,8 @@ const connect = ()=>{
         throw error;
     })
 };
+app.use(cookieParser())
+app.use(express.json())
 
 app.get("/",(req, res)=>{
   res.send("Hello World Bro")
@@ -30,8 +32,6 @@ app.use(cors({
   origin:'http://localhost:5173', // Replace with your frontend origin
   WithCredentials: true,
 }))
-app.use(cookieParser())
-app.use(express.json())
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/videos", videoRoutes);
