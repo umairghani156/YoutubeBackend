@@ -27,7 +27,7 @@ app.get("/",(req, res)=>{
 //Hello world
 //console.log(connect);
 app.use(cors({
-  origin: 'http://localhost:5173', // Replace with your frontend origin
+  origin:'http://localhost:5173', // Replace with your frontend origin
   credentials: true,
 }))
 app.use(cookieParser())
