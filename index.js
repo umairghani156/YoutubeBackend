@@ -30,7 +30,7 @@ app.get("/",(req, res)=>{
 //console.log(connect);
 app.use(cors({
   origin:'http://localhost:5173', // Replace with your frontend origin
-  WithCredentials: true,
+  credentials: true,
 }))
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
