@@ -8,15 +8,15 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
+        "src": "/(.*)",
         "dest": "/index.js"
       }
     ],
     "functions": {
-      "api/*": {
-        "maxDuration": 10,  
-        "memory": 1024      
-      }
+    "/(.*)": {
+      "maxDuration": 30,   
+      "memory": 1024       
     }
+  }
     
 }
